@@ -7,7 +7,7 @@ static void	*ft_memalloc(size_t size)
 
     new = (void *) malloc(size);
     if (!new)
-        return (0);
+        return (NULL);
     a = 0;
     while (a < size)
     {
