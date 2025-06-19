@@ -37,6 +37,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_isalnum(int c);
-char	*ft_strnstr(const char *big, const char *little, size_t len)
-
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 #endif
