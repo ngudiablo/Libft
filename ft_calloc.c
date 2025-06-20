@@ -2,24 +2,24 @@
 
 static void	*ft_memalloc(size_t size)
 {
-    void	*new;
+    void	*ptr;
     size_t	a;
 
-    new = (void *) malloc(size);
-    if (!new)
+    ptr = (void *)malloc(size);
+    if (!ptr)
         return (NULL);
     a = 0;
     while (a < size)
     {
-        *(unsigned char *)(new + a) = 0;
+        *(unsigned char *)(ptr + a) = 0;
         a++;
     }
-    return (new);
+    return (ptr);
 }
 
 void	*ft_calloc(size_t count, size_t size)
 {
-    if (size != 0 && count > ((size_t) -1 / size))
+    if (size != 0 && count > ((size_t)-1 / size))
         return (NULL);
     return (ft_memalloc(count * size));
 }
