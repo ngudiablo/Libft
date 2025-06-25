@@ -2,11 +2,13 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	size_t	a;
+    size_t	a;
 
-	a = 0;
-	while (s[a])
-		a++;
-	write(fd, s, a);
-	write(fd, "\n", 1);
+    if (!s)
+        return ;
+    a = 0;
+    while (s[a])
+        a++;
+    write(fd, s, a);
+    write(fd, "\n", 1);
 }
